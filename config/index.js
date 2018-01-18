@@ -23,20 +23,20 @@ module.exports = {
     },
     dev: {
         env: require('./dev.env'),
-        port: 8080,
+        port: 8280,
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        proxyTable: {
+        proxyTable: {//后台配置
             '/api':{
-                target:'http://jsonplaceholder.typicode.com',
+                target:'',
                 changeOrigin:true,
                 pathRewrite:{
                     '/api':''
                 }
             },
             '/ms':{
-                target: 'https://www.easy-mock.com/mock/592501a391470c0ac1fab128',
+                target: '',
                 changeOrigin: true
             }
         },
